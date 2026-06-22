@@ -1,0 +1,21 @@
+:root {
+  --screen-w: min(100vw, calc(100svh * 779 / 1690));
+  --screen-h: min(100svh, calc(100vw * 1690 / 779));
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #bfeeff; overscroll-behavior: none; touch-action: manipulation; }
+body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+#app { position: fixed; inset: 0; display: grid; place-items: center; background: #bfeeff; }
+.screen { position: absolute; width: var(--screen-w); height: var(--screen-h); display: none; overflow: hidden; background: #c8f1ff; box-shadow: 0 0 0 1px rgba(0,0,0,.03); }
+.screen.active { display: block; animation: fadeIn .16s ease-out; }
+.screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; user-select: none; -webkit-user-drag: none; }
+.hot { position: absolute; border: 0; background: rgba(255,255,255,0); cursor: pointer; z-index: 5; border-radius: 999px; padding: 0; }
+.hot:active { transform: scale(.97); background: rgba(255,255,255,.13); }
+.click { left: 9.5%; top: 81.1%; width: 81%; height: 8.4%; }
+.lang { top: 94.0%; height: 5.3%; }
+.lang.cn { left: 3.6%; width: 29.8%; }
+.lang.en { left: 35.2%; width: 30.4%; }
+.lang.jp { left: 68.2%; width: 29.5%; }
+.back { left: 1.6%; top: 96.2%; width: 25.5%; height: 3.4%; }
+@keyframes fadeIn { from { opacity: .72; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+@media (display-mode: standalone) { html, body { background: #bfeeff; } }

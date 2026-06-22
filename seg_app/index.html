@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#bfeeff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="K-Beauty Look" />
+  <title>K-Beauty Look</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" aria-label="K-Beauty Look shopping guide">
+    <section class="screen active" id="home-en" data-page="1" aria-label="English cover">
+      <img src="assets/page-1.png" alt="Get the K-Beauty Look English cover" draggable="false" />
+      <button class="hot click" data-target="list-en" aria-label="Open English sale list"></button>
+      <button class="hot lang cn" data-target="home-cn" aria-label="Chinese"></button>
+      <button class="hot lang en" data-target="home-en" aria-label="English"></button>
+      <button class="hot lang jp" data-target="home-jp" aria-label="Japanese"></button>
+    </section>
+
+    <section class="screen" id="home-jp" data-page="2" aria-label="Japanese cover">
+      <img src="assets/page-2.png" alt="Japanese K-beauty routine cover" draggable="false" />
+      <button class="hot click" data-target="list-jp" aria-label="Open Japanese sale list"></button>
+      <button class="hot lang cn" data-target="home-cn" aria-label="Chinese"></button>
+      <button class="hot lang en" data-target="home-en" aria-label="English"></button>
+      <button class="hot lang jp" data-target="home-jp" aria-label="Japanese"></button>
+    </section>
+
+    <section class="screen" id="home-cn" data-page="3" aria-label="Chinese cover">
+      <img src="assets/page-3.png" alt="Chinese K-beauty skincare cover" draggable="false" />
+      <button class="hot click" data-target="list-cn" aria-label="Open Chinese sale list"></button>
+      <button class="hot lang cn" data-target="home-cn" aria-label="Chinese"></button>
+      <button class="hot lang en" data-target="home-en" aria-label="English"></button>
+      <button class="hot lang jp" data-target="home-jp" aria-label="Japanese"></button>
+    </section>
+
+    <section class="screen" id="list-en" data-page="4" aria-label="English sale list">
+      <img src="assets/page-4.png" alt="English sale list" draggable="false" />
+      <button class="hot back" data-target="home-en" aria-label="Back to English cover"></button>
+    </section>
+
+    <section class="screen" id="list-cn" data-page="5" aria-label="Chinese sale list">
+      <img src="assets/page-5.png" alt="Chinese sale list" draggable="false" />
+      <button class="hot back" data-target="home-cn" aria-label="Back to Chinese cover"></button>
+    </section>
+
+    <section class="screen" id="list-jp" data-page="6" aria-label="Japanese sale list">
+      <img src="assets/page-6.png" alt="Japanese sale list" draggable="false" />
+      <button class="hot back" data-target="home-jp" aria-label="Back to Japanese cover"></button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
